@@ -1,0 +1,257 @@
+.phone {
+  height: 2436px;
+  width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-block: 20px;
+  padding-inline: 20px;
+  object-position: center;
+  border-radius: 100px;
+  background-color: aquamarine;
+}
+.screen {
+  height: 2436px;
+  width: 1125px;
+  border-radius: 100px;
+  position: relative;
+  background-image: url(../img/screen_background.png);
+  background-size: cover;
+  background-position: center;
+}
+.bar {
+  height: 300px;
+  width: 1000px;
+  position: relative;
+  left: 62.5px;
+  top: -375px;
+  background-color: grey;
+  border-radius: 100px;
+}
+.icon {
+  height: 200px;
+  width: 200px;
+  border-radius: 40px;
+  display: inline-block;
+}
+.icon_text_widget {
+  display: inline-block;
+  font-size: 48px;
+  color: white;
+  position: relative;
+
+  top: 280px;
+  left: -450px;
+}
+.icon_text_memo {
+  display: inline-block;
+  font-size: 48px;
+  color: white;
+  position: relative;
+  top: -515px;
+  left: 310px;
+}
+.icon_text {
+  display: inline-block;
+  font-size: 48px;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+.icon_text_row1 {
+  top: 225px;
+}
+.icon_text_row2 {
+  top: 150px;
+}
+.icon_text_row3 {
+  top: 75px;
+}
+.icon_text_row4 {
+  top: 0px;
+}
+.icon_text_col1 {
+  left: 137.5px;
+}
+.icon_text_col2 {
+  left: 287.5px;
+}
+.icon_text_col3 {
+  left: 437.5px;
+}
+.icon_text_col4 {
+  left: 557.5px;
+}
+.icon_text_col12 {
+  left: 137.5px;
+}
+.icon_text_col22 {
+  left: 267.5px;
+}
+.icon_text_col32 {
+  left: 357.5px;
+}
+.icon_text_col42 {
+  left: 432.5px;
+}
+.icon_text_col13 {
+  left: 97.5px;
+}
+.icon_text_col23 {
+  left: 137.5px;
+}
+.icon_text_col14 {
+  left: 87.5px;
+}
+.icon_text_col24 {
+  left: 162.5px;
+}
+a#widget {
+  height: 454.6px;
+  width: 950px;
+  position: relative;
+  left: 87.5px;
+  top: 237.5px;
+
+  border-radius: 60px;
+
+  display: inline-block;
+  background-image: url(../img/widget.png);
+  background-position: center;
+  background-size: cover;
+}
+.col1 {
+  position: relative;
+  left: 87.5px;
+}
+.col2 {
+  position: relative;
+  left: 137.5px;
+}
+.col3 {
+  position: relative;
+  left: 187.5px;
+}
+.col4 {
+  position: relative;
+  left: 237.5px;
+}
+.row1 {
+  position: relative;
+  top: 280px;
+}
+.row2 {
+  position: relative;
+  top: 200px;
+}
+.row3 {
+  position: relative;
+  top: 120px;
+}
+.row4 {
+  position: relative;
+  top: 40px;
+}
+
+a#EDU {
+  background-image: url(../img/EDU.png);
+  background-position: center;
+  background-size: cover;
+}
+a#shop {
+  background-image: url(../img/shop.png);
+  background-position: center;
+  background-size: cover;
+}
+a#social {
+  background-image: url(../img/social.png);
+  background-position: center;
+  background-size: cover;
+}
+a#cma {
+  background-image: url(../img/camera.png);
+  background-position: center;
+  background-size: cover;
+}
+a#yt {
+  background-image: url(../img/youtube.png);
+  background-position: center;
+  background-size: cover;
+}
+a#msg {
+  background-image: url(../img/Messenger.png);
+  background-position: center;
+  background-size: cover;
+}
+a#app {
+  background-image: url(../img/app.png);
+  background-position: center;
+  background-size: cover;
+}
+a#partytu {
+  background-image: url(../img/partytu.png);
+  background-size: cover;
+  background-position: center;
+}
+a#baha {
+  background-image: url(../img/baha.png);
+  background-position: center;
+  background-size: cover;
+}
+a#bili {
+  background-image: url(../img/bilibili.png);
+  background-position: center;
+  background-size: cover;
+}
+a#fgo {
+  background-image: url(../img/FGO.png);
+  background-position: center;
+  background-size: cover;
+}
+a#photo {
+  background-image: url(../img/photo.png);
+  background-position: center;
+  background-size: cover;
+}
+a#memo {
+  height: 454.6px;
+  width: 454.6px;
+  position: relative;
+  top: -575px;
+  left: 600px;
+  border-radius: 60px;
+
+  display: inline-block;
+  background-image: url(../img/memo.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.bar_i {
+  display: inline-block;
+  position: relative;
+  top: 60px;
+}
+a#dialer {
+  background-image: url(../img/dialer.png);
+  background-position: center;
+  background-size: cover;
+  left: 35px;
+}
+a#contacts {
+  background-image: url(../img/msg.png);
+  background-position: center;
+  background-size: cover;
+  left: 75px;
+}
+a#brave {
+  background-image: url(../img/brave.png);
+  background-position: center;
+  background-size: cover;
+  left: 115px;
+}
+a#protonmail {
+  background-image: url(../img/proton.png);
+  background-position: center;
+  background-size: cover;
+  left: 155px;
+}
