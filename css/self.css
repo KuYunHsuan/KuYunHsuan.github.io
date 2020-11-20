@@ -58,8 +58,8 @@
   background-color: rgba(0, 0, 0, 0.65);
   padding-right: 10%;
   padding-left: 10%;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   border-radius: 20%;
 }
 .HelloThere {
@@ -83,7 +83,7 @@ body {
 /* Style the tab */
 .tab {
   float: left;
-  padding-top: 1.5%;
+  padding-top: 3.5%;
   border: 1px solid #ccc;
   background-color: #f1beb0;
   width: 20%;
@@ -95,7 +95,7 @@ body {
   display: block;
   background-color: inherit;
   color: #000000;
-  padding: 22px 16px;
+  padding: 10% 10%;
   width: 100%;
   border: none;
   outline: none;
