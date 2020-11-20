@@ -1,0 +1,136 @@
+.tabbing {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.borderless {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.side-borderless {
+  border-left: 1px;
+  border-right: 1px;
+}
+.align_l {
+  float: left;
+}
+.align_r {
+  float: right;
+}
+.align_l_text {
+  text-align: left;
+}
+.align_r_text {
+  text-align: right;
+}
+.padding {
+  padding: 2.5% 2.5%;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #f1beb0;
+  z-index: 1;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.gallery {
+  position: relative;
+}
+.background {
+  opacity: 0.7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 80%;
+  display: inline;
+  border-radius: 5%;
+}
+.gallery_word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  border-radius: 20%;
+}
+.HelloThere {
+  color: #f1beb0;
+}
+.self-intro {
+  color: #f1beb0;
+}
+h4 {
+  color: #000000;
+  padding-bottom: 5px;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#Edu {
+  size: fixed;
+  height: 475px;
+}
+/* Style the tab */
+.tab {
+  float: left;
+  padding-top: 1.5%;
+  border: 1px solid #ccc;
+  background-color: #f1beb0;
+  width: 20%;
+  height: 300px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #000000;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #000000;
+  color: #f1beb0;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #000000;
+  color: #f1beb0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 5% 5%;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  width: 80%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+#blank {
+  height: 100px;
+}
+#moreblock {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f1beb0;
+}

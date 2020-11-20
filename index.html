@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yun-Hsuan Ku's Personal Web</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/self.css">
+</head>
+<body>
+    <div id='navbar' class = 'jumbotron borderless'>
+        <a href="#top" class="btn btn-primary my-2 tabbing">Top</a>
+        <a href="#About_me" class="btn btn-primary my-2">About me</a>
+        <a href="#Edu" class="btn btn-primary my-2">Education</a>
+        <a href="#Interest" class="btn btn-primary my-2">Interest</a>
+        <a href="#Talent" class="btn btn-primary my-2">Talent</a>
+        <a href="#Trying" class="btn btn-primary my-2">Trying</a>
+        <a href="mailto:b07207005@ntu.edu.tw" class="btn btn-primary my-2 align_r tabbing">Contact me</a>
+    </div>
+    <script type="text/javascript">
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        } 
+    </script>
+    <main role = 'main'>
+        <a name = 'top'></a>
+        <section class="jumbotron text-center">
+            <div class = 'container gallery'>
+                <img id="image" class = 'background' src="./img/1.jpg">
+                <script type="text/javascript">
+                    var image = document.getElementById("image");
+                    var currentPos = 1;
+                    var images = ["./img/1.jpg",
+                                  "./img/2.jpg",
+                                  "./img/3.jpg",
+                                  "./img/4.jpg",
+                                  "./img/5.jpg",
+                                  "./img/6.jpg",
+                                  "./img/7.jpg",
+                                  "./img/8.jpg",
+                                  "./img/9.jpg",
+                                  "./img/10.jpg"]
+
+                    function volgendefoto() {
+                        if (++currentPos >= images.length)
+                            currentPos = 0;
+
+                        image.src = images[currentPos];
+                    }
+
+                    setInterval(volgendefoto, 3000);
+                </script>
+                <div class = 'gallery_word'>
+                    <h1 class = 'HelloThere'>Hello There!!</h1>
+                    <h3 class = 'self-intro'>I'm Yun-Hsuan, Ku!</h3>
+                </div>
+            </div>
+        </section>
+
+        <div class = 'jumbotron container text-center' id = 'About_me'>
+            <a href="About_me"></a>
+            <h4>About me, in short</h4>
+            <p class = 'text-muted'>Born in Taipei, spent about half of my life in Hualien for elementary school and junior high school, where I met the best teacher, in my mind, who taught me a lot of things.
+                And then came back to Taipei to study at Jian Guo Senior High School, which changed me a lot in attitude toward grades and learning, I think. After that, I got in to the department of psychology in NTU. Now trying my best to master coding skill and combine them with the knowledge of psychology.</p>
+        </div>
+
+        <div class = 'jumbotron container' id = 'Edu'>
+            <h4 class='text-center'>Education</h4>
+            <div class="tab">
+                <button class="tablinks" onmouseover="stage(event, 'University')">University</button>
+                <button class="tablinks" onmouseover="stage(event, 'SeniorHigh')">Senior High</button>
+                <button class="tablinks" onmouseover="stage(event, 'JuniorHigh')">Junior High</button>
+                <button class="tablinks" onmouseover="stage(event, 'Elementary')">Elementary</button>
+            </div>
+            <script type="text/javascript">
+                function stage(evt, stages) {
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                // Show the current tab, and add an "active" class to the link that opened the tab
+                    document.getElementById(stages).style.display = "block";
+                    evt.currentTarget.className += " active";
+                } 
+            </script>
+
+            <div id="University" class="tabcontent" style="display: block;">
+                <h5>University</h5>
+                <p class="text-muted">Department of Psychology, in National Taiwan University</p>
+                <img src="./img/NTUPSYlogo.png" alt="NTU_Psychology">
+            </div>
+            
+            <div id="SeniorHigh" class="tabcontent">
+                <h5>Senior High</h5>
+                <p class="text-muted">Taipei Municipal Jianguo High School(Taipei city)</p>
+                <img src="./img/JianGuoLogo.png" alt="JianGuoSeniorHigh">
+            </div>
+            
+            <div id="JuniorHigh" class="tabcontent">
+                <h5>Junior High</h5>
+                <p class="text-muted">Guo Feng Junior High School (Heulien county)</p>
+                <img src="./img/GuoFengLogo.png" alt="GuoFengJuniorHigh" style = "height: 60%;">
+            </div>
+            
+            <div id="Elementary" class="tabcontent">
+                <h5>Elementary</h5>
+                <p class="text-muted">Zhong Zheng Elementary School (Hualien county)</p>
+                <img src="./img/ZhongZhengLogo.jpg" alt="ZhongZhengElementary" style = "height: 60%;">
+            </div>
+        </div>
+
+        <section class = 'jumbotron container' id = 'More'>
+            <div class = 'align_r_text padding row' id = 'Interest'>
+                <div class = "col-sm-3">
+                    <img src="./img/interest.png" alt="interest">
+                </div>
+                <div class = "cil-sm-9">
+                    <h4>Interest</h4>
+                    <p class="text-muted">- Japanese manga, animation (stiil not able to accept some 3D animation yet though)</p>
+                    <p class="text-muted">- Video games (on PC, not other platforms, mainly playing Crazy KartRider(2004), and some </p>
+                    <p class="text-muted">- Japanese songs (especially works by Sawano Hiroyuki, they're awesome)</p>
+                </div>
+            </div>
+            <div id ='blank'></div>
+            <div class = 'align_l_text padding row' id = 'Talent'>
+                <div class = "col-sm-9">
+                    <h4>Talent</h4>
+                    <p class="text-muted">- A little bit of Japanese</p>
+                    <p class="text-muted">- customized keyboard build (only simple ones)</p>
+                    <p class="text-muted">- assembling parts of computer</p>
+                    <p class="text-muted">- calligraphy a little bit</p>
+                </div>
+                <div class = "col-sm-3">
+                    <img src="./img/talent.png" alt="talent">
+                </div>
+                
+            </div>
+            <div id ='blank'></div>
+            <div class = 'align_r_text padding row' id = 'Trying'>
+                <div class = "col-sm-3">
+                    <img src="./img/trying.png" alt="Trying">
+                </div>
+                <div class = "col-sm-9">
+                    <h4>Trying Now</h4>
+                    <p class="text-muted">- make my laptop live as long as possible, LOL.</p>
+                    <p class="text-muted">- make remote desktop as convinient as possible</p>
+                    <p class="text-muted">- translate some Japanese Manga to share with my firends.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="text-muted align_r_text tabbing">powered by bootstrap, w3school</p> 
+    </footer>
+</body>
+</html>
