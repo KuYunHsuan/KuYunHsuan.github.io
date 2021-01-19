@@ -1,5 +1,0 @@
-Main Functions:
-- automatically switch the weeks
-- add important, unimportant tasks
-- delete finished tasks
-- 
