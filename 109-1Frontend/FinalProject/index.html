@@ -1,0 +1,213 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Calender Page</title>
+    <link rel="stylesheet" href="./cssbootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div id="Control container" class="Upperbar inline-block">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <button class="upper_button">
+        <a href="https://kuyunhsuan.github.io/">
+          <img src="./img/homepage.png" alt="homepage" id="home" class="controlicon">
+        </a>
+      </button>
+      <button onmousedown="edit()">
+        <img src="./img/edit.png" alt="edit" id="edit" class="controlicon">
+      </button>
+      <button onmousedown="addTask()">
+        <img src="./img/add.png" alt="add" id="add" class="controlicon">
+      </button>
+      <button onmousedown="addImportant()">
+        <img src="./img/important.png" alt="important" id="important" class="controlicon">
+      </button>
+      <button>
+        <a onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="index.html">
+          <img src="./img/save.png" alt="save" id="save" class="controlicon">
+        </a>
+      </button>
+    </div>
+    <script type="text/javascript">
+      function addTask() {
+          var Day = prompt("what day is it?");
+          var Theme = prompt("what's the theme?");
+          var Description = prompt("what's the details?");
+          var Id = "#"+Day;
+          var Theme_div = $("<div class='task tooltip new'></div>").text(Theme);
+          var Description_span = $("<span class='tooltiptext'></span>").text(Description);
+          $(Id).append(Theme_div);
+          $(".new").append(Description_span);
+          $(".new").removeClass("new")
+        }
+      function addImportant(){
+          var Day = prompt("what day is it?");
+          var Theme = prompt("what's the theme?");
+          var Description = prompt("what's the details?");
+          var Id = "#"+Day;
+          var Theme_div = $("<div class='task tooltip important new'></div>").text(Theme);
+          var Description_span = $("<span class='tooltiptext'></span>").text(Description);
+          $(Id).append(Theme_div);
+          $(".new").append(Description_span);
+          $(".new").removeClass("new")
+      }
+      // function edit(){
+      //    var new_theme = prompt("what's the new theme?", Theme);
+      //    var new_description = prompt("what's the new details?", );
+      // }
+    </script>
+    <div id="Calender container" class="Main inline-block">
+      <div class="tab">
+        <button class="tablinks active" onmouseover="stage(event, 'Now')">Now</button>
+        <button class="tablinks" onmouseover="stage(event, 'Next')">The Next</button>
+        <button class="tablinks" onmouseover="stage(event, 'After_the_Next')">After the Next</button>
+      </div>
+      <script type="text/javascript">
+        function stage(evt, stages) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(
+              " active",
+              ""
+            );
+          }
+
+          // Show the current tab, and add an "active" class to the link that opened the tab
+          document.getElementById(stages).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script>
+
+      <div id="Now" class="tabcontent" style="display: block;">
+        <h3>Plan for This Week</h3>
+        <div class="card Monday">
+          <div class="container" id="Monday">
+            <h4><b>Monday</b></h4>
+            <div class="task tooltip">
+              FrontEnd Final Project
+              <span class="tooltiptext">Finish the project on time!</span>
+            </div>
+          </div>
+        </div>
+        <div class="card Tuesday">
+          <div class="container" id="Tuesday">
+            <h4><b>Tuesday</b></h4>
+          <div class="task tooltip">Presentation<span class="tooltiptext">FRONTENDDESIGN FINAL PRESENTATION!!!!!!!</span></div></div>
+        </div>
+        <div class="card Wednesday">
+          <div class="container" id="Wednesday">
+            <h4><b>Wednesday</b></h4>
+          <div class="task tooltip">knowledge and methodology term paper<span class="tooltiptext">6400 words term paper......</span></div></div>
+        </div>
+        
+        <div class="card Thrusday">
+          <div class="container" id="Thrusday">
+            <h4><b>Thrusday</b></h4>
+          </div>
+        </div>
+        <div class="card Friday">
+          <div class="container" id="Friday">
+            <h4><b>Friday</b></h4>
+          <div class="task tooltip">Brain and Language Term paper<span class="tooltiptext">10 pages term paper......</span></div></div>
+        </div>
+        <div class="card Saturday">
+          <div class="container" id="Saturday">
+            <h4><b>Saturday</b></h4>
+          </div>
+        </div>
+        <div class="card Sunday">
+          <div class="container" id="Sunday">
+            <h4><b>Sunday</b></h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="Next" class="tabcontent" style="display: none;">
+        <h3>Plan for Next Week</h3>
+        <div class="card Monday">
+          <div class="container" id="nextMonday">
+            <h4><b>Monday</b></h4>
+          </div>
+        </div>
+        <div class="card Tuesday">
+          <div class="container" id="nextTuesday">
+            <h4><b>Tuesday</b></h4>
+          </div>
+        </div>
+        <div class="card Wednesday">
+          <div class="container" id="nextWednesday">
+            <h4><b>Wednesday</b></h4>
+          </div>
+        </div>
+        <div class="card Thrusday">
+          <div class="container" id="nextThrusday">
+            <h4><b>Thrusday</b></h4>
+          </div>
+        </div>
+        <div class="card Friday">
+          <div class="container" id="nextFriday">
+            <h4><b>Friday</b></h4>
+          </div>
+        </div>
+        <div class="card Saturday">
+          <div class="container" id="nextSaturday">
+            <h4><b>Saturday</b></h4>
+          </div>
+        </div>
+        <div class="card Sunday">
+          <div class="container" id="nextSunday">
+            <h4><b>Sunday</b></h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="After_the_Next" class="tabcontent" style="display: none;">
+        <h3>Plan for the Week after the next</h3>
+        <div class="card Monday">
+          <div class="container" id="ANMonday">
+            <h4><b>Monday</b></h4>
+          </div>
+        </div>
+        <div class="card Tuesday">
+          <div class="container" id="ANTuesday">
+            <h4><b>Tuesday</b></h4>
+          </div>
+        </div>
+        <div class="card Wednesday">
+          <div class="container" id="ANWednesday">
+            <h4><b>Wednesday</b></h4>
+          </div>
+        </div>
+        <div class="card Thrusday">
+          <div class="container" id="ANThrusday">
+            <h4><b>Thrusday</b></h4>
+          </div>
+        </div>
+        <div class="card Friday">
+          <div class="container" id="ANFriday">
+            <h4><b>Friday</b></h4>
+          </div>
+        </div>
+        <div class="card Saturday">
+          <div class="container" id="ANSaturday">
+            <h4><b>Saturday</b></h4>
+          </div>
+        </div>
+        <div class="card Sunday">
+          <div class="container" id="ANSunday">
+            <h4><b>Sunday</b></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+</body></html>
